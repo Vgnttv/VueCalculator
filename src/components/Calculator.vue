@@ -30,7 +30,8 @@ export default {
       previous: null,
       current: "",
       operator: null,
-      operatorClicked: false
+      operatorClicked: false,
+      equalClicked: false,
     };
   },
   methods: {
@@ -55,9 +56,10 @@ export default {
       }
     },
     append(number) {
-      if (this.operatorClicked) {
+      if (this.operatorClicked || this.equalClicked) {
         this.current = "";
         this.operatorClicked = false;
+        this.equalClicked = false;
       }
       this.current = `${this.current}${number}`;
     },
@@ -100,6 +102,7 @@ export default {
       }
       console.log("RESULT", this.current);
       this.previous = null;
+      this.equalClicked= true;
     }
   }
 };
