@@ -1,7 +1,7 @@
 # VueCalculator
 This is my first Front End project using vue.js and it is a calculator 
 
-![Alt Text](https://media.giphy.com/media/JRVnpR3bkWd3Y0Slq1/giphy.gif)
+![Alt Text](https://media.giphy.com/media/lOIg4RbVJzqYhlNsK3/giphy.gif)
 
 ## Project setup
 ```
