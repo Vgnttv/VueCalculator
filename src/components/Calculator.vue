@@ -1,9 +1,9 @@
 <template>
   <div class="calculator">
     <div class="display">{{current || '0'}}</div>
-    <div @click="clear" class="btn">C</div>
-    <div @click="sign" class="btn">+/-</div>
-    <div @click="percent" class="btn">%</div>
+    <div @click="clear" class="btn first">C</div>
+    <div @click="sign" class="btn first">+/-</div>
+    <div @click="percent" class="btn first">%</div>
     <div @click="divide" class="btn operator">:</div>
     <div @click="append('7')" class="btn">7</div>
     <div @click="append('8')" class="btn">8</div>
@@ -112,8 +112,11 @@ export default {
   background-color: #f2f2f2;
   border: 1px solid #999;
 }
+.first{
+  background-color: #a6a39a;
+}
 .operator {
-  background-color: orange;
+  background-color: #ffa31a;
   color: white;
 }
 </style>
