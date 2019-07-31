@@ -54,7 +54,7 @@ export default {
       this.current = `${this.current}${number}`;
     },
     dot() {
-      if (this.current.indexOf(".") === -1) {
+      if (this.current.indexOf(".") === -1 && this.current !== '') {
         this.append(".");
       }
     },
@@ -111,6 +111,9 @@ export default {
 .btn {
   background-color: #f2f2f2;
   border: 1px solid #999;
+}
+.btn:active{
+  background-color: #999;
 }
 .first{
   background-color: #a6a39a;
