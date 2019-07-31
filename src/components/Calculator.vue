@@ -38,12 +38,14 @@ export default {
       this.current = "";
     },
     sign() {
+      if (this.current === ''){return this.current = ''}
       this.current =
         this.current.charAt(0) === "-"
           ? this.current.slice(1)
           : `- ${this.current}`;
     },
     percent() {
+      if (this.current === ''){return this.current = ''}
       this.current = `${parseFloat(this.current) / 100}`;
     },
     append(number) {
@@ -82,6 +84,7 @@ export default {
       this.setPrevious();
     },
     equal() {
+      
       this.current = `${this.operator(
         parseFloat(this.previous),
         parseFloat(this.current)
