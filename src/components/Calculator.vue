@@ -54,7 +54,10 @@ export default {
       this.current = `${this.current}${number}`;
     },
     dot() {
-      if (this.current.indexOf(".") === -1 && this.current !== '') {
+      if (this.current === ''){
+        this.append("0.");
+      }
+      if (this.current.indexOf(".") === -1) {
         this.append(".");
       }
     },
@@ -112,10 +115,10 @@ export default {
   background-color: #f2f2f2;
   border: 1px solid #999;
 }
-.btn:active{
+.btn:active {
   background-color: #999;
 }
-.first{
+.first {
   background-color: #a6a39a;
 }
 .operator {
