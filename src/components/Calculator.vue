@@ -31,7 +31,7 @@ export default {
       current: "",
       operator: null,
       operatorClicked: false,
-      equalClicked: false,
+      equalClicked: false
     };
   },
   methods: {
@@ -39,21 +39,12 @@ export default {
       this.current = "";
     },
     sign() {
-      if (this.current === "") {
-        return (this.current = "");
-      } else {
-        this.current =
-          this.current.charAt(0) === "-"
-            ? this.current.slice(1)
-            : `-${this.current}`;
-      }
+      this.current === "" ? this.current : (this.current -= this.current * 2);
     },
     percent() {
-      if (this.current === "") {
-        return (this.current = "");
-      } else {
-        this.current = `${parseFloat(this.current) / 100}`;
-      }
+      this.current === ""
+        ? (this.current = "")
+        : (this.current = `${parseFloat(this.current) / 100}`);
     },
     append(number) {
       if (this.operatorClicked || this.equalClicked) {
@@ -97,12 +88,12 @@ export default {
           parseFloat(this.previous),
           parseFloat(this.current),
           console.log("PREVOUS", this.previous),
-          console.log("CURRENT", this.current),
+          console.log("CURRENT", this.current)
         )}`;
       }
       console.log("RESULT", this.current);
       this.previous = null;
-      this.equalClicked= true;
+      this.equalClicked = true;
     }
   }
 };
