@@ -4,7 +4,7 @@
     <div @click="clear" class="btn first">C</div>
     <div @click="sign" class="btn first">+/-</div>
     <div @click="percent" class="btn first">%</div>
-    <div @click="divide" class="btn operator">:</div>
+    <div @click="divide" class="btn operator">÷</div>
     <div @click="append('7')" class="btn">7</div>
     <div @click="append('8')" class="btn">8</div>
     <div @click="append('9')" class="btn">9</div>
@@ -98,34 +98,37 @@ export default {
 <style scoped>
 .calculator {
   margin: 0 auto;
-  width: 400px;
+  width: 300px;
   font-size: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
+  border: 1px solid #2c3e50;
 }
 .display {
   text-align: end;
   padding-right: 10px;
   grid-column: 1/5;
-  background-color: #333;
+  background-color: #2c3e50;
   color: white;
+  
 }
 .zero {
   grid-column: 1/3;
 }
 .btn {
-  background-color: #f2f2f2;
-  border: 1px solid #999;
+  background-color: #86afdb;
+  border: 1px solid #2c3e50;
 }
 .btn:active {
-  background-color: #999;
+  background-color: #2c3e50;
+  color: white;
 }
 .first {
-  background-color: #a6a39a;
+  background-color: #5f99d4;
 }
 .operator {
-  background-color: #ffa31a;
+  background-color: #a9d1f8;
   color: white;
 }
 </style>
