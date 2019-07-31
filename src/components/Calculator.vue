@@ -87,11 +87,8 @@ export default {
         this.current = `${this.operator(
           parseFloat(this.previous),
           parseFloat(this.current),
-          console.log("PREVOUS", this.previous),
-          console.log("CURRENT", this.current)
         )}`;
       }
-      console.log("RESULT", this.current);
       this.previous = null;
       this.equalClicked = true;
     }
