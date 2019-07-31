@@ -38,15 +38,21 @@ export default {
       this.current = "";
     },
     sign() {
-      if (this.current === ''){return this.current = ''}
-      this.current =
-        this.current.charAt(0) === "-"
-          ? this.current.slice(1)
-          : `- ${this.current}`;
+      if (this.current === "") {
+        return (this.current = "");
+      } else {
+        this.current =
+          this.current.charAt(0) === "-"
+            ? this.current.slice(1)
+            : `-${this.current}`;
+      }
     },
     percent() {
-      if (this.current === ''){return this.current = ''}
-      this.current = `${parseFloat(this.current) / 100}`;
+      if (this.current === "") {
+        return (this.current = "");
+      } else {
+        this.current = `${parseFloat(this.current) / 100}`;
+      }
     },
     append(number) {
       if (this.operatorClicked) {
@@ -56,7 +62,7 @@ export default {
       this.current = `${this.current}${number}`;
     },
     dot() {
-      if (this.current === ''){
+      if (this.current === "") {
         this.append("0.");
       }
       if (this.current.indexOf(".") === -1) {
@@ -84,13 +90,15 @@ export default {
       this.setPrevious();
     },
     equal() {
-      
       this.current = `${this.operator(
         parseFloat(this.previous),
-        parseFloat(this.current)
+        parseFloat(this.current),
+        console.log("PREVOUS",this.previous),
+        console.log("CURRENT",this.current)
       )}`;
+      console.log("RESULT", this.current)
       this.previous = null;
-    }
+    },
   }
 };
 </script>
@@ -111,7 +119,6 @@ export default {
   grid-column: 1/5;
   background-color: #2c3e50;
   color: white;
-  
 }
 .zero {
   grid-column: 1/3;
