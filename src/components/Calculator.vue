@@ -86,7 +86,7 @@ export default {
       if (this.previus || this.current !== "") {
         this.current = `${this.operator(
           parseFloat(this.previous),
-          parseFloat(this.current),
+          parseFloat(this.current)
         )}`;
       }
       this.previous = null;
